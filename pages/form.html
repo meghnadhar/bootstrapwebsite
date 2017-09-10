@@ -1,5 +1,28 @@
 <!DOCTYPE html>
 <html>
+<head>
+	<script>
+	function  validateForm(){
+		var x=document.forms["myForm"]["email"].value;
+		if(x==""){alert("Enter valid emailid");
+		return false;}
+		 var x = document.forms["myForm"]["email"].value;
+    var atpos = x.indexOf("@");
+    var dotpos = x.lastIndexOf(".");
+    if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length) {
+        alert("Not a valid e-mail address");
+        return false;}
+
+		var x=document.forms["myForm"]["psw"].value;
+		if(x==""){alert("Enter your password");
+		return false;}
+
+		var x=document.forms["myForm"]["psw-repeat"].value;
+		if(x==""){alert("confirm your password");
+		return false;}
+	}
+	</script>
+</head>
 <style>
 /* Full-width input fields */
 input[type=text], input[type=password] {
@@ -57,16 +80,16 @@ button {
 
 <h2>Signup Form</h2>
 
-<form action="/action_page.php" style="border:1px solid #ccc">
+<form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post" style="border:1px solid #ccc">
   <div class="container">
     <label><b>Email</b></label>
-    <input type="text" placeholder="Enter Email" name="email" required>
+    <input type="text" placeholder="Enter Email" name="email">
 
     <label><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
+    <input type="password" placeholder="Enter Password" name="psw">
 
     <label><b>Repeat Password</b></label>
-    <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+    <input type="password" placeholder="Repeat Password" name="psw-repeat">
     <input type="checkbox" checked="checked"> Remember me
     <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
 
