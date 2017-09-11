@@ -1,27 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<script>
-	function  validateForm(){
-		var x=document.forms["myForm"]["email"].value;
-		if(x==""){alert("Enter valid emailid");
-		return false;}
-		 var x = document.forms["myForm"]["email"].value;
-    var atpos = x.indexOf("@");
-    var dotpos = x.lastIndexOf(".");
-    if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length) {
-        alert("Not a valid e-mail address");
-        return false;}
-
-		var x=document.forms["myForm"]["psw"].value;
-		if(x==""){alert("Enter your password");
-		return false;}
-
-		var x=document.forms["myForm"]["psw-repeat"].value;
-		if(x==""){alert("confirm your password");
-		return false;}
-	}
-	</script>
+     <title>Sign-up Form</title>
+    <meta name="description" content="Help the Growing People">
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
 </head>
 <style>
 /* Full-width input fields */
@@ -101,4 +92,25 @@ button {
 </form>
 
 </body>
+<script>
+	function  validateForm(){
+		var x=document.forms["myForm"]["email"].value;
+		if(x==""){alert("Enter valid emailid");
+		return false;}
+		 var x = document.forms["myForm"]["email"].value;
+    	var atpos = x.indexOf("@");
+    	var dotpos = x.lastIndexOf(".");
+    	if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length) {
+        alert("Not a valid e-mail address");
+        return false;}
+
+		var x=document.forms["myForm"]["psw"].value;
+		if(x==""){alert("Enter your password");
+		return false;}
+
+		var x=document.forms["myForm"]["psw-repeat"].value;
+		if(x==""){alert("confirm your password");
+		return false;}
+	}
+	</script>
 </html>

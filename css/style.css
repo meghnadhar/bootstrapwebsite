@@ -98,4 +98,11 @@ padding-left: 30px;}
 height: 310px;}
 .social a{
 margin-left: 30px;
-padding-left: 10px;}
+padding-left: 10px;} 
+
+
+
+.navbar-form{
+	display: inline-block;
+}
+
